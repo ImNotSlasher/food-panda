@@ -61,10 +61,36 @@ flutter:
   assets:
    - assets/img/CheesyHotdogSeafoodPizza(M).jpg
    - assets/img/CheesyHotdogBBQChickenPizza.jpg
+   - assets/img/Cheesyhotdogbbqpork(M).jpg
+   - assets/img/Cheesyhotdogseafoodcocktail(M).jpg
+   - assets/img/Cheesyhotdoghawaiian(M).jpg
+   - assets/img/Cheesyhotdogtomatoshrimp(M).jpg
+   - assets/img/Cheesyhotdogspicybeef(M).jpg
+   - assets/img/Cheesyhotdogtomyum(M).jpg
+   - assets/img/Cheesyhotdogdoublecheese(M).jpg
+   - assets/img/Cheesyhotdogdoublepepperoni(M).jpg
    - assets/img/PanPizzaDoubleCheese(M).jpg
    - assets/img/PanPizzaSeafood(M).jpg
    - assets/img/PastaKeemaoSeafood(Spicy).jpg
    - assets/img/PastaShrimpRose.jpg
+   - assets/img/Pastaspicychicken.jpg
+   - assets/img/Pastaspicypork.jpg
+   - assets/img/Pastahawaiian.jpg
+   - assets/img/Pastacarbonara.jpg
+   - assets/img/Pastabolognese.jpg
+   - assets/img/Pastahamandmushroom.jpg
+   - assets/img/Pastatomyum.jpg
+   - assets/img/Pastaspicyduck.jpg
+   - assets/img/Pastaspicybeef.jpg
+   - assets/img/Bbqchickenwings.jpg
+   - assets/img/Pepperchickenwings.jpg
+   - assets/img/Purewater.jpg
+   - assets/img/Lemontea.jpg
+   - assets/img/Milktea.jpg
+   - assets/img/Frenchfries.jpg
+   - assets/img/Coca(bottle).jpg
+   - assets/img/Coca(can).jpg
+   - assets/img/Chickennugget.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_panda/widgets/searchbar.dart';
+import 'package:food_panda/tabs/tabs.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -88,18 +89,18 @@ class _HomeState extends State<Home> {
         ),
           body: TabBarView(
            children: [
-             /*Popular(),
+             Popular(),
              Specialoffer(),
              Pasta(),
              Chicken(),
-             CheesyHotdogPizza(),
-             PanPizza(),
-             CrispyPizza(),
-             ItalianPizza(),
-             CheesyJumboPizza(),
-             CheeseCrustPizza(),
-             Appetizers(),
-             Beverages(),*/
+             Cheesyhotdogpizza(),
+             Panpizza(),
+             Crispypizza(),
+             Italianpizza(),
+             Cheesyjumbopizza(),
+             Cheesecrustpizza(),
+             Appetizer(),
+             Beverages(),
             ],
           ),
       ),
