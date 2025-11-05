@@ -25,7 +25,14 @@ class Specialoffer extends StatelessWidget {
     ];
 
     final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+      'name': [
+        'Cheesy Hotdog BBQ Chicken Pizza (M)',
+        'Pasta-Keemao Seafood (Spicy)',
+        'Pasta-Shrimp Rose',
+        'Cheesy Hotdog Seafood Pizza (M)',
+        'Pasta-Spicy Chicken',
+        'Pasta-Spicy Pork',
+      ][i % 6],
       'description': descriptions[i % descriptions.length],
       'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
       'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],

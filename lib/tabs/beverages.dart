@@ -7,28 +7,32 @@ class Beverages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Purewater.jpg',
+      'Milktea.jpg',
+      'Lemontea.jpg',
+      'Coca(can).jpg',
+      'Coca(bottle).jpg',
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      '500 ml',
+      'The perfect balance between tea and milk yet not too sweet (For ref only)',
+      'Everyone favorite drink! With the most iconic mixture of Taiwanese tea, lemon, and sugar to make it tastes refreshing (For ref only)',
+      '330 ml',
+      '1.5L'
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(5, (i) => {
+      'name': [
+        'Pure Water',
+        'Milk Tea',
+        'Lemon Tea',
+        'Coca-Cola (can)',
+        'Coca-Cola (bottle)',
+      ][i % 5],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$0.37', '\$0.66', '\$0.55', '\$0.55', '\$1.26'][i % 5],
+      'oldPrice': ['\$0.68', '\$1.20', '\$1.00', '\$1.00', '\$2.30'][i % 5],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 
