@@ -11,73 +11,43 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
-
-  // Scroll controllers for each tab
-  late ScrollController _popularController;
-  late ScrollController _specialController;
-  late ScrollController _pastaController;
-  late ScrollController _chickenController;
-  late ScrollController _cheesyController;
-  late ScrollController _panController;
-  late ScrollController _crispyController;
-  late ScrollController _italianController;
-  late ScrollController _jumboController;
-  late ScrollController _crustController;
-  late ScrollController _appetizerController;
-  late ScrollController _beveragesController;
+  final List<ScrollController> _controllers =
+      List.generate(12, (_) => ScrollController());
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 12, vsync: this);
 
-    _popularController = ScrollController();
-    _specialController = ScrollController();
-    _pastaController = ScrollController();
-    _chickenController = ScrollController();
-    _cheesyController = ScrollController();
-    _panController = ScrollController();
-    _crispyController = ScrollController();
-    _italianController = ScrollController();
-    _jumboController = ScrollController();
-    _crustController = ScrollController();
-    _appetizerController = ScrollController();
-    _beveragesController = ScrollController();
+    // Add listeners for auto-switch scroll
+    for (int i = 0; i < _controllers.length; i++) {
+      _controllers[i].addListener(() {
+        double pixels = _controllers[i].position.pixels;
+        double max = _controllers[i].position.maxScrollExtent;
 
-    // Example auto-tab-on-scroll for Popular → SpecialOffer
-    _popularController.addListener(() {
-      if (_popularController.position.pixels >=
-          _popularController.position.maxScrollExtent - 50) {
-        if (_tabController.index == 0) _tabController.animateTo(1);
-      }
-    });
-    _specialController.addListener(() {
-      if (_specialController.position.pixels <= 50) {
-        if (_tabController.index == 1) _tabController.animateTo(0);
-      }
-      if (_specialController.position.pixels >=
-          _specialController.position.maxScrollExtent - 50) {
-        if (_tabController.index == 1) _tabController.animateTo(2);
-      }
-    });
-    // Add more scroll listeners similarly if needed
+        // Scroll down → go to next tab
+        if (pixels >= max - 50 && i < _controllers.length - 1) {
+          if (_tabController.index == i) {
+            _tabController.animateTo(i + 1);
+          }
+        }
+
+        // Scroll up → go to previous tab
+        if (pixels <= 50 && i > 0) {
+          if (_tabController.index == i) {
+            _tabController.animateTo(i - 1);
+          }
+        }
+      });
+    }
   }
 
   @override
   void dispose() {
     _tabController.dispose();
-    _popularController.dispose();
-    _specialController.dispose();
-    _pastaController.dispose();
-    _chickenController.dispose();
-    _cheesyController.dispose();
-    _panController.dispose();
-    _crispyController.dispose();
-    _italianController.dispose();
-    _jumboController.dispose();
-    _crustController.dispose();
-    _appetizerController.dispose();
-    _beveragesController.dispose();
+    for (var controller in _controllers) {
+      controller.dispose();
+    }
     super.dispose();
   }
 
@@ -160,18 +130,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         body: TabBarView(
           controller: _tabController,
           children: [
-            Popular(scrollController: _popularController),
-            Specialoffer(scrollController: _specialController),
-            Pasta(scrollController: _pastaController),
-            Chicken(scrollController: _chickenController),
-            Cheesyhotdogpizza(scrollController: _cheesyController),
-            Panpizza(scrollController: _panController),
-            Crispypizza(scrollController: _crispyController),
-            Italianpizza(scrollController: _italianController),
-            Cheesyjumbopizza(scrollController: _jumboController),
-            Cheesecrustpizza(scrollController: _crustController),
-            Appetizer(scrollController: _appetizerController),
-            Beverages(scrollController: _beveragesController),
+            Popular(scrollController:ScrollController()),
+            Specialoffer(scrollController:ScrollController()),
+            Pasta(scrollController:ScrollController()),
+            Chicken(scrollController:ScrollController()),
+            Cheesyhotdogpizza(scrollController:ScrollController()),
+            Panpizza(scrollController:ScrollController()),
+            Crispypizza(scrollController:ScrollController()),
+            Italianpizza(scrollController:ScrollController()),
+            Cheesyjumbopizza(scrollController:ScrollController()),
+            Cheesecrustpizza(scrollController:ScrollController()),
+            Appetizer(scrollController:ScrollController()),
+            Beverages(scrollController:ScrollController()),
           ],
         ),
       ),
