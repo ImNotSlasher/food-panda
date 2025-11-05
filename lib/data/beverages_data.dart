@@ -1,4 +1,4 @@
-final List<Map<String, dynamic>> BeveragesItem = [
+final List<Map<String, dynamic>> beveragesItem = [
   {
     'name': 'Pure water',
     'price': 0.37,

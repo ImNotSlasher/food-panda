@@ -1,4 +1,4 @@
-final List<Map<String, dynamic>> PastaItems = [
+final List<Map<String, dynamic>> pastaItems = [
   {
     'name': 'Pasta-Tom yum',
     'price': 3.80,

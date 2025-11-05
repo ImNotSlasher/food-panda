@@ -1,4 +1,4 @@
-final List<Map<String, dynamic>> SpecialofferItems = [
+final List<Map<String, dynamic>> specialofferItems = [
   {
     'name': 'Cheesy Hotdog BBQ Chicken Pizza',
     'price': 10.94,

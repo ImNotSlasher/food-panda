@@ -1,5 +1,5 @@
 
-final List<Map<String, dynamic>> PopularItems = [
+final List<Map<String, dynamic>> popularItems = [
   {
     'name': 'Cheesy Hotdog BBQ Chicken Pizza',
     'price': 10.94,
