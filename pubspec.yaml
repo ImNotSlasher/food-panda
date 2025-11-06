@@ -90,7 +90,23 @@ flutter:
    - assets/img/Frenchfries.jpg
    - assets/img/Coca(bottle).jpg
    - assets/img/Coca(can).jpg
-   - assets/img/Chickennugget.jpg
+   - assets/img/Cheesecrusttomyum.jpg
+   - assets/img/Cheesecrusttomatoshrimp.jpg
+   - assets/img/Cheesecrustseafood.jpg
+   - assets/img/Cheesecrustspicybeef.jpg
+   - assets/img/Cheesecrustbbqchicken.jpg
+   - assets/img/Cheesyjumbohotdogseafoodcocktail.jpg
+   - assets/img/Cheesyjumbohotdoghawaiian.jpg
+   - assets/img/Cheesyjumbohotdogbbqpork.jpg
+   - assets/img/Cheesyjumbohotdogbbqchicken.jpg
+   - assets/img/Crispythinseafoodcocktail.jpg
+   - assets/img/Crispythintomyum.jpg
+   - assets/img/Crispythintomatoshrimp.jpg
+   - assets/img/Crispythinpizzaspicybeef.jpg
+   - assets/img/Panpizzadoublepapperoni.jpg
+   - assets/img/Panpizzahawaiian.jpg
+   - assets/img/Panpizzatomatoshrimp.jpg
+   - assets/img/Panpizzabbqchicken.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Popular extends StatelessWidget {
-  final ScrollController scrollController;
-  const Popular({super.key,required this.scrollController});
+  final ScrollController? scrollController;
+  const Popular({super.key, this.scrollController});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +32,7 @@ class Popular extends StatelessWidget {
     });
 
     return CustomScrollView(
+      controller: scrollController,
       slivers: [
         SliverToBoxAdapter(
           child: Padding(

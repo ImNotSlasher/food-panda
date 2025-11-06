@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Beverages extends StatelessWidget {
-  final ScrollController scrollController;
-  const Beverages({super.key, required this.scrollController});
+  final ScrollController? scrollController;
+  const Beverages({super.key, this.scrollController});
 
   @override
   Widget build(BuildContext context) {
@@ -61,12 +61,12 @@ class Beverages extends StatelessWidget {
                         item['name']!,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
+                        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
                       ),
                       const SizedBox(height: 2),
                       Text(
                         item['description']!,
-                        maxLines: 2,
+                        maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(color: Colors.grey, fontSize: 12),
                       ),
