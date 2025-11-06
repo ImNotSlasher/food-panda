@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_panda/widgets/searchbar.dart';
-import 'package:food_panda/tabs/tabs.dart'; // ✅ only one import now!
+import 'package:food_panda/tabs/tabs.dart'; 
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -174,12 +174,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   Widget _buildSection(int index, String title, Widget content) {
     return Container(
       key: _sectionKeys[index],
-      margin: const EdgeInsets.only(bottom: 20),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _sectionTitle(title),
-          content,
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 10),
+          content, // 👈 this is your tab widget
         ],
       ),
     );
