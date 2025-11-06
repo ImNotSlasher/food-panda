@@ -106,7 +106,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   );
                 }),
           ],
-          bottom: const TabBar(
+          bottom: TabBar(
+            controller: _tabController,
             isScrollable: true,
             labelColor: Colors.black,
             tabAlignment: TabAlignment.start,
