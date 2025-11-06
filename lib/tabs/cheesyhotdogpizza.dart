@@ -7,28 +7,37 @@ class Cheesyhotdogpizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Cheesyhotdogbbqpork(M).jpg',
+      'Cheesyhotdogdoublepepperoni(M).jpg',
+      'Cheesyhotdoghawaiian(M).jpg',
+      'Cheesyhotdogseafoodcocktail(M).jpg',
+      'Cheesyhotdogspicybeef(M).jpg',
+      'Cheesyhotdogtomatoshrimp(M).jpg',
+      'Cheesyhotdogtomyum(M).jpg',
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked pork, lots of cheese, and red onion (For ref only)',
+      'Cheesy hot dog crust pizza dough topped with mozzarella cheese, sliced pepperoni  (For ref only)',
+      'Cheesy hot dog crust pizza dough topped with pizza sauce, cheese, cooked ham, and pineapple (For ref only)',
+      'Cheesy hot dog crust pizza dough topped with pizza sauce, cheese, ham, shrimp, crab stick and pineapple (For ref only)',
+      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, cooked beef, spicy chili and roma tomato (For ref only)',
+      'Medium'
+      'Cheesy hot dog crust pizza topped with pizza sauce, tom yum tomato sauce, cheese, shrimp, mussels and mushroom (For ref only)'
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(7, (i) => {
+      'name': ['Cheesy Hotdog BBQ Pork Pizza (M)'
+               'Cheesy Hotdog Double Pepperoni (M)'
+               'Cheesy Hotdog Seafood Cocktail (M)'
+               'Cheesy Hotdog Hawaiian (M)'
+               'Cheesy Hotdog Spicy Beef Pizza (M)'
+               'Cheesy Hotdog Tomato Shrimp Pizza (M)'
+               'Cheesy Hotdog Tom Yum (M)'
+      ][i%7],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$10.95', '\$10.62', '\$12.22', '\$10.95', '\$12.22', '\$12.22', '\$12.22'][i % 7],
+      'oldPrice': ['\$19.90', '\$19.30', '\$22.22', '\$19.90', '\$22.22', '\$22.22', '\$22.22'][i % 7],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 

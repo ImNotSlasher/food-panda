@@ -7,28 +7,28 @@ class Cheesyjumbopizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Cheesyjumbohotdogbbqchicken.jpg'
+      'Cheesyjumbohotdogbbqpork.jpg'
+      'Cheesyjumbohotdoghawaiian.jpg'
+      'Cheesyjumbohotdogseafoodcocktail.jpg'
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      'Its a deliciously indulgent combination of savory, cheesy, and smoky flavors, perfect for satisfying cravings with every bite (For ref only)',
+      'The cheesy jumbo hotdog BBQ pork pizza is a delightful blend of flavors, with savory BBQ pork, melted cheese, and hearty jumbo hotdog slices on a crispy pizza crust (For ref only)',
+      'A tantalizing twist on the classic Hawaiian pizza, featuring juicy jumbo hotdog slices, sweet pineapple chunks, savory ham, and gooey melted cheese on a crispy pizza crust (For ref only)',
+      'A mouthwatering creation, featuring succulent seafood cocktail mixed with juicy jumbo hotdog slices and gooey melted cheese, all nestled within a fluffy bun (For ref only)',
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(4, (i) => {
+      'name': ['Cheesy Jumbo Hotdog BBQ Chicken Pizza (M)'
+                'Cheesy Jumbo Hotdog BBQ Pork Pizza (M)'
+                'Cheesy Jumbo Hotdog Hawaiian (M)'
+                'Cheesy Jumbo Hotdog Seafood Cocktail (M)'
+      ][i%4],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$10.95', '\$10.95', '\$10.95', '\$12.22'][i % 4],
+      'oldPrice': ['\$19.90', '\$19.90', '\$19.90', '\$22.22'][i % 4],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 

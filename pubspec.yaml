@@ -107,6 +107,8 @@ flutter:
    - assets/img/Panpizzahawaiian.jpg
    - assets/img/Panpizzatomatoshrimp.jpg
    - assets/img/Panpizzabbqchicken.jpg
+   - assets/img/Crispywing.jpg
+   - assets/img/Spicycornercrispywing.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

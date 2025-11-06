@@ -12,12 +12,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<ScrollController> _controllers =
-      List.generate(12, (_) =>  ScrollController());
+      List.generate(11, (_) =>  ScrollController());
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 12, vsync: this);
+    _tabController = TabController(length: 11, vsync: this);
 
     // Add listeners for auto-switch scroll
     for (int i = 0; i < _controllers.length; i++) {
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 12,
+      length: 11,
       child: Scaffold(
         appBar: AppBar(
           title: const SearchBarWidget(),
@@ -120,7 +120,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               Tab(text: 'Cheesy Hotdog Pizza'),
               Tab(text: 'Pan Pizza'),
               Tab(text: 'Crispy Pizza'),
-              Tab(text: 'Italian Pizza'),
               Tab(text: 'Cheesy Jumbo Pizza'),
               Tab(text: 'Cheese Crust Pizza'),
               Tab(text: 'Appetizers'),
@@ -138,11 +137,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             Cheesyhotdogpizza(scrollController: _controllers[4]),
             Panpizza(scrollController: _controllers[5]),
             Crispypizza(scrollController: _controllers[6]),
-            Italianpizza(scrollController: _controllers[7]),
-            Cheesyjumbopizza(scrollController: _controllers[8]),
-            Cheesecrustpizza(scrollController: _controllers[9]),
-            Appetizer(scrollController: _controllers[10]),
-            Beverages(scrollController: _controllers[11]),
+            Cheesyjumbopizza(scrollController: _controllers[7]),
+            Cheesecrustpizza(scrollController: _controllers[8]),
+            Appetizer(scrollController: _controllers[9]),
+            Beverages(scrollController: _controllers[10]),
           ],
         ),
       ),

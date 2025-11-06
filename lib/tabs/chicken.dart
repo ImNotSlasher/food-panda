@@ -7,28 +7,28 @@ class Chicken extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Crispywing.jpg',
+      'Spicycornercrispywing.jpg',
+      'Pepperchickenwings.jpg',
+      'Bbqchickenwings'
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      'Crispy, golden brown, and tender (For ref only)',
+      'Crispy deep-fried spicy chicken, so yum! (For ref only)',
+      'Perfectly marinated chicken wing with pepper and other ingredients then grilled until golden brown (For ref only)',
+      'Crispy chicken wings smothered in a sweet, tangy BBQ sauce (For ref only)',
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(4, (i) => {
+      'name': ['Crispy Wings'
+               'Spicy Corner Crispy Wings (6pcs)'
+               'Pepper Chicken Wings'
+               'BBQ Chicken Wings'
+      ][i%4],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$3.35', '\$3.35', '\$3.25', '\$3.02'][i % 4],
+      'oldPrice': ['\$3.10', '\$6.10', '\$5.90', '\$25.50'][i % 4],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 

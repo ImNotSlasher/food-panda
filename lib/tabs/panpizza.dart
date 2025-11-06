@@ -7,28 +7,28 @@ class Panpizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Panpizzabbqchicken.jpg'
+      'Panpizzadoublepepperoni.jpg'
+      'Panpizzahawaiian.jpg'
+      'Panpizzatomatoshrimp.jpg'
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      'Medium (For ref only)',
+      'Pan crust pizza topped with mozzarella cheese, sliced pepperoni (For ref only)',
+      'Pan crust pizza topped with pizza sauce, cheese, cooked ham, and pineapple (For ref only)',
+      'Medium (For ref only)',
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(4, (i) => {
+      'name': ['Pan Pizza BBQ Chicken (M)'
+               'Pan Pizza Double Papperoni (M)'
+               'Pan Pizza Hawiian (M)'
+               'Pan Pizza Tomato Shrimp (M)'
+      ][i%4],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$6.77', '\$6.54', '\$6.77', '\$7.26'][i % 4],
+      'oldPrice': ['\$12.30', '\$11.90', '\$12.30', '\$13.20'][i % 4],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 

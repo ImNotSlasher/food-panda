@@ -7,28 +7,32 @@ class Cheesecrustpizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageNames = [
-      'CheesyHotdogBBQChickenPizza.jpg',
-      'PastaKeemaoSeafood(Spicy).jpg',
-      'PastaShrimpRose.jpg',
-      'CheesyHotdogSeafoodPizza(M).jpg',
-      'Pastaspicychicken.jpg',
-      'Pastaspicypork.jpg'
+      'Cheesecrustbbqchicken.jpg'
+      'Cheesecrustseafood.jpg'
+      'Cheesecrusttomyum.jpg'
+      'Cheesecrusttomatoshrimp.jpg'
+      'Cheesecrustspicybeef.jpg'
     ];
 
     final descriptions = [
-      'Cheesy hot dog crust pizza dough topped with BBQ sauce, cooked chicken, lots of cheese, and red onion (For ref only)',
-      'Salty, spicy and savoury pasta with seafood (For ref only)',
-      'Pasta in a tomato-based cream sauce. Its the perfect hybrid between tomato-based sauces and creamy sauces (For ref only)',
-      'Cheesy hot dog crust pizza topped with pizza sauce, cheese, shrimp, crab stick, squid, mussels and pineapple (For ref only)',
-      'Pasta-Spicy chicken (Spicy)'
-      'Meat Pork & Tomato, Mushroom'
+      'A delicious blend of savory flavors thats sure to satisfy (For ref only)',
+      'This flavorful combination is complemented by melted mozzarella cheese, offering a satisfying taste of the sea in every bite (For ref only)',
+      'This pizza offers a perfect blend of savory and spicy flavors that will satisfy your taste buds (For ref only)',
+      'A cheese-filled crust topped with succulent shrimp and a savory tomato sauce (For ref only)',
+      'Dive into our Cheese Crust Spicy Beef Pizza, featuring a cheese-filled crust topped with flavorful spicy beef, melted mozzarella cheese, and a tangy tomato sauce'
     ];
 
-    final items = List.generate(6, (i) => {
-      'name': 'Special Pizza Deal #${i + 1}',
+    final items = List.generate(5, (i) => {
+      'name': [
+        'Cheese Crust BBQ Chicken Pizza (M)',
+        'Cheese Crust Seafood Pizza (M)',
+        'Cheese Crust Tom Yum Pizza (M)',
+        'Cheese Crust Tomato Shrimp (M)',
+        'Cheese Crust Spicy Beef Pizza (M)',
+      ][i % 5],
       'description': descriptions[i % descriptions.length],
-      'price': ['\$10.94', '\$3.80', '\$3.80', '\$12.22', '\$3.58', '\$3.58'][i % 6],
-      'oldPrice': ['\$19.90', '\$6.90', '\$6.90', '\$22.22', '\$6.50', '\$6.50'][i % 6],
+      'price': ['\$10.95', '\$12.22', '\$12.22', '\$12.22', '\$12.22'][i % 5],
+      'oldPrice': ['\$19.90', '\$22.22', '\$22.22', '\$22.22', '\$22.22'][i % 5],
       'image': 'assets/img/${imageNames[i % imageNames.length]}',
     });
 
