@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<ScrollController> _controllers =
-      List.generate(12, (_) => ScrollController());
+      List.generate(12, (_) =>  ScrollController());
 
   @override
   void initState() {
@@ -130,21 +130,21 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         body: TabBarView(
           controller: _tabController,
           children: [
-            Popular(scrollController:ScrollController()),
-            Specialoffer(scrollController:ScrollController()),
-            Pasta(scrollController:ScrollController()),
-            Chicken(scrollController:ScrollController()),
-            Cheesyhotdogpizza(scrollController:ScrollController()),
-            Panpizza(scrollController:ScrollController()),
-            Crispypizza(scrollController:ScrollController()),
-            Italianpizza(scrollController:ScrollController()),
-            Cheesyjumbopizza(scrollController:ScrollController()),
-            Cheesecrustpizza(scrollController:ScrollController()),
-            Appetizer(scrollController:ScrollController()),
-            Beverages(scrollController:ScrollController()),
+            Popular(scrollController: _controllers[0]),
+            Specialoffer(scrollController: _controllers[1]),
+            Pasta(scrollController: _controllers[2]),
+            Chicken(scrollController: _controllers[3]),
+            Cheesyhotdogpizza(scrollController: _controllers[4]),
+            Panpizza(scrollController: _controllers[5]),
+            Crispypizza(scrollController: _controllers[6]),
+            Italianpizza(scrollController: _controllers[7]),
+            Cheesyjumbopizza(scrollController: _controllers[8]),
+            Cheesecrustpizza(scrollController: _controllers[9]),
+            Appetizer(scrollController: _controllers[10]),
+            Beverages(scrollController: _controllers[11]),
           ],
         ),
       ),
     );
-  }
+  }  
 }
